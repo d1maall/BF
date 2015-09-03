@@ -1,0 +1,194 @@
+@import "bourbon/bourbon"
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
+@import url(http://webfonts.ru/import/intro.css)
+
+$font-stack: Helvetica Neue, sans-serif
+$border-width: 5px
+$border-color-social: white
+$border-color-cta: #ffed2c
+$social-cell-size: 66px
+$text-color: white
+
+=menu-lettering($spacing: 2px)
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: 300
+  font-size: 0.8rem
+  text-transform: uppercase
+  letter-spacing: $spacing
+
+=lettering($spacing: 2px, $font-size: 1rem, $font-weight: 100)
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: $font-weight
+  font-size: $font-size
+  text-transform: uppercase
+  letter-spacing: $spacing
+
+=title-lettering($spacing: 2px)
+  font-family: 'Intro', Helvetica Neue, sans-serif
+  text-transform: uppercase
+  font-size: 6rem
+
+html, body
+  background-color: black
+  color: white
+  height: 100%
+  width: 100%
+  font-family: $font-stack
+  margin: 0
+  padding: 0
+
+p
+  margin: 0
+  padding: 0
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: 300
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0 0 7px 0
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  letter-spacing: 7px
+  font-weight: 500
+  font-size: 2rem
+  text-transform: uppercase
+
+h1
+  width: 100%
+  text-align: center
+  &:after
+    content: "\a —"
+    white-space: pre
+    font-weight: 100
+
+p
+  //width: 100%
+  text-align: center
+  padding-left: 200px
+  padding-right: 200px
+
+section
+//width: 100%
+//height: 100%
+//&:nth-child(even)
+  background-color: aquamarine
+//&:nth-child(odd)
+  background-color: blanchedalmond
+
+.start-screen
+  width: 100%
+  height: 100%
+  .start-screen__menu
+    +menu-lettering()
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    .start-screen__menu__group
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+    .start-screen__menu__group--left
+      width: 33.333%
+    .start-screen__menu__group--center
+      width: 16.6665%
+    .start-screen__menu__group--right
+      width: 16.6665%
+      justify-content: flex-end
+      a
+        text-decoration: none
+        color: $text-color
+    .start-screen__menu__item
+      padding: 25px
+      cursor: pointer
+      text-align: center
+      &:hover
+        background-color: burlywood
+    .start-screen__menu__item--stroked
+      padding: 25px - $border-width
+      border: $border-width solid $border-color-cta
+  .start-screen__social-buttons
+    @media screen and (max-width: 800px)
+      display: none
+    position: absolute
+    @include transform(translate(-100%, -50%))
+    top: 50%
+    left: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    align-content: stretch
+    .start-screen__social-button__item
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+      width: $social-cell-size
+      height: $social-cell-size
+      border-left: $border-width solid $border-color-social
+      border-right: $border-width solid $border-color-social
+      border-bottom: $border-width solid $border-color-social
+      text-align: center
+      &:hover
+        background-color: burlywood
+      &:first-child
+        border: $border-width solid $border-color-social
+  .start-screen__title
+    position: absolute
+    left: 50%
+    top: 50%
+    @include transform(translate(-50%, -50%))
+    text-align: center
+    max-width: 800px
+    .start-screen__title__logo
+      img
+        width: 25%
+        margin-bottom: 5px
+    .start-screen__title__brand-name
+      +title-lettering()
+    .start-screen__title__description
+      +lettering($spacing: 2px, $font-size: 1.2rem, $font-weight: 300)
+      margin-top: 10px
+      line-height: 2rem
+    .start-screen__title__sweeties
+      margin-top: 60px
+      +lettering($spacing: 1px, $font-size: 0.7rem, $font-weight: 300)
+      display: flex
+      justify-content: center
+      .start-screen__title__sweeties--left, .start-screen__title__sweeties--right
+        padding-left: 20px
+        padding-right: 20px
+  .start-screen__bouncing-arrow
+    font-size: 2em
+    position: absolute
+    top: 100%
+    left: 50%
+    @include transform(translate(-50%, -100%))
+    .start-screen__bouncing-arrow--transparent
+      color: #000
+
+.quality
+  background-color: #ffcaca
+  padding-top: 80px
+  padding-bottom: 40px
+  display: flex
+  justify-content: center
+  .quality__text
+    max-width: 800px
+    //h1
+      font-family: 'Lato', Helvetica Neue, sans-serif
+      letter-spacing: 7px
+      font-weight: 300
+      font-size: 2rem
+      text-transform: uppercase
+
+.gallery
+  background-color: darksalmon
+  //height: 200px
+  padding-top: 40px
+  padding-bottom: 100px
+
+.contact-us
+  background-color: #8A6343
+  height: 200px
+  padding-top: 40px
+  padding-bottom: 100px
+
