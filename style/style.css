@@ -46,7 +46,11 @@ p {
 
 .start-screen {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background-image: url(../img/auto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .start-screen .start-screen__menu {
     font-family: "Lato", Helvetica Neue, sans-serif;
     font-weight: 300;
