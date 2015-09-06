@@ -25,11 +25,26 @@ $(document).ready(function () {
     $(window).scroll(function (event) {
         if ($(window).scrollTop() > 0) {
             $(".start-screen__bouncing-arrow").fadeOut();
-            console.log("scrolled");
+            //console.log("scrolled");
         }
         if ($(window).scrollTop() == 0) {
             $(".start-screen__bouncing-arrow").fadeIn();
-            console.log("scrolled to top");
+            //console.log("scrolled to top");
+        }
+
+        if (($(window).scrollTop() > 0)) {
+            console.log($(window).scrollTop()/$(window).height());
+            var ratio = $(window).scrollTop()/$(window).height();
+            if (ratio < 1) {
+                $(".navbar__menu").css("background-color", "rgba(0,0,0," + ratio + ")");
+            }
+            else {
+                $(".navbar__menu").css("background-color", "rgba(0,0,0,1)");
+            }
+
+        }
+        if ($(window).scrollTop() == 0) {
+            $(".navbar__menu").css("background-color", "rgba(0,0,0,0)");
         }
     });
 });
