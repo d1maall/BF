@@ -84,6 +84,42 @@ section
 //&:nth-child(odd)
   background-color: blanchedalmond
 
+.navbar__menu
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+  +menu-lettering()
+  @include display(flex)
+  @include flex-wrap(wrap)
+  @include justify-content(flex-end)
+  .navbar__menu__group
+    @include display(flex)
+    @include flex-wrap(wrap)
+    @include justify-content(center)
+  .navbar__menu__group--left
+    width: 33.333%
+    @media screen and (max-width: 800px)
+      display: none
+  .navbar__menu__group--center
+    width: 16.6665%
+    @media screen and (max-width: 800px)
+      display: none
+  .navbar__menu__group--right
+    width: 16.6665%
+    @include justify-content(flex-end)
+    a
+      text-decoration: none
+      color: $text-color
+  .navbar__menu__item
+    padding: 25px
+    cursor: pointer
+    text-align: center
+    &:hover
+      background-color: burlywood
+  .navbar__menu__item--stroked
+    padding: 25px - $border-width
+    border: $border-width solid $border-color-cta
 .start-screen
   width: 100%
   height: 100%
@@ -91,38 +127,11 @@ section
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  .start-screen__menu
-    +menu-lettering()
-    @include display(flex)
-    @include flex-wrap(wrap)
-    @include justify-content(flex-end)
-    .start-screen__menu__group
-      @include display(flex)
-      @include flex-wrap(wrap)
-      @include justify-content(center)
-    .start-screen__menu__group--left
-      width: 33.333%
-      @media screen and (max-width: 800px)
-        display: none
-    .start-screen__menu__group--center
-      width: 16.6665%
-      @media screen and (max-width: 800px)
-        display: none
-    .start-screen__menu__group--right
-      width: 16.6665%
-      @include justify-content(flex-end)
-      a
-        text-decoration: none
-        color: $text-color
-    .start-screen__menu__item
-      padding: 25px
-      cursor: pointer
-      text-align: center
-      &:hover
-        background-color: burlywood
-    .start-screen__menu__item--stroked
-      padding: 25px - $border-width
-      border: $border-width solid $border-color-cta
+  .start-screen_overlay
+    width: 100%
+    height: 100%
+    background-color: #000000
+    opacity: 0.7
   .start-screen__social-buttons
     @media screen and (max-width: 800px)
       display: none

@@ -44,19 +44,40 @@ p {
   padding-left: 200px;
   padding-right: 200px; }
 
-.start-screen {
+.navbar__menu {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 100%;
-  background-image: url(../img/auto.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .start-screen .start-screen__menu {
-    font-family: "Lato", Helvetica Neue, sans-serif;
-    font-weight: 300;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  z-index: 100;
+  font-family: "Lato", Helvetica Neue, sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: end; }
+  .navbar__menu .navbar__menu__group {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -71,6 +92,27 @@ p {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+  .navbar__menu .navbar__menu__group--left {
+    width: 33.333%; }
+    @media screen and (max-width: 800px) {
+      .navbar__menu .navbar__menu__group--left {
+        display: none; } }
+  .navbar__menu .navbar__menu__group--center {
+    width: 16.6665%; }
+    @media screen and (max-width: 800px) {
+      .navbar__menu .navbar__menu__group--center {
+        display: none; } }
+  .navbar__menu .navbar__menu__group--right {
+    width: 16.6665%;
     -webkit-box-pack: end;
     -moz-box-pack: end;
     box-pack: end;
@@ -80,63 +122,31 @@ p {
     -o-justify-content: flex-end;
     justify-content: flex-end;
     -ms-flex-pack: end; }
-    .start-screen .start-screen__menu .start-screen__menu__group {
-      display: -webkit-box;
-      display: -moz-box;
-      display: box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-lines: multiple;
-      -moz-box-lines: multiple;
-      box-lines: multiple;
-      -webkit-flex-wrap: wrap;
-      -moz-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-box-pack: center;
-      -moz-box-pack: center;
-      box-pack: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      -ms-justify-content: center;
-      -o-justify-content: center;
-      justify-content: center;
-      -ms-flex-pack: center; }
-    .start-screen .start-screen__menu .start-screen__menu__group--left {
-      width: 33.333%; }
-      @media screen and (max-width: 800px) {
-        .start-screen .start-screen__menu .start-screen__menu__group--left {
-          display: none; } }
-    .start-screen .start-screen__menu .start-screen__menu__group--center {
-      width: 16.6665%; }
-      @media screen and (max-width: 800px) {
-        .start-screen .start-screen__menu .start-screen__menu__group--center {
-          display: none; } }
-    .start-screen .start-screen__menu .start-screen__menu__group--right {
-      width: 16.6665%;
-      -webkit-box-pack: end;
-      -moz-box-pack: end;
-      box-pack: end;
-      -webkit-justify-content: flex-end;
-      -moz-justify-content: flex-end;
-      -ms-justify-content: flex-end;
-      -o-justify-content: flex-end;
-      justify-content: flex-end;
-      -ms-flex-pack: end; }
-      .start-screen .start-screen__menu .start-screen__menu__group--right a {
-        text-decoration: none;
-        color: white; }
-    .start-screen .start-screen__menu .start-screen__menu__item {
-      padding: 25px;
-      cursor: pointer;
-      text-align: center; }
-      .start-screen .start-screen__menu .start-screen__menu__item:hover {
-        background-color: burlywood; }
-    .start-screen .start-screen__menu .start-screen__menu__item--stroked {
-      padding: 20px;
-      border: 5px solid #ffed2c; }
+    .navbar__menu .navbar__menu__group--right a {
+      text-decoration: none;
+      color: white; }
+  .navbar__menu .navbar__menu__item {
+    padding: 25px;
+    cursor: pointer;
+    text-align: center; }
+    .navbar__menu .navbar__menu__item:hover {
+      background-color: burlywood; }
+  .navbar__menu .navbar__menu__item--stroked {
+    padding: 20px;
+    border: 5px solid #ffed2c; }
+
+.start-screen {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/auto.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .start-screen .start-screen_overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.7; }
   .start-screen .start-screen__social-buttons {
     position: absolute;
     -webkit-transform: translate(-100%, -50%);
