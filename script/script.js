@@ -21,7 +21,6 @@ $(document).ready(function () {
         myMap.controls.add(zoomControl);
 
     }
-
     $(window).scroll(function (event) {
         if ($(window).scrollTop() > 0) {
             $(".start-screen__bouncing-arrow").fadeOut();

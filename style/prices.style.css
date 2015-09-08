@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://webfonts.ru/import/intro.css);
+html, body {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica Neue, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", Helvetica Neue, sans-serif;
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0 0 7px 0;
+  font-family: "Lato", Helvetica Neue, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 7px; }
+  h1:after {
+    content: "\a—";
+    white-space: pre;
+    font-weight: 100; }
+
+h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 4px; }
+
+p {
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px; }
+
+.navbar__menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  font-family: "Lato", Helvetica Neue, sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: end; }
+  .navbar__menu .navbar__menu__group {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+  .navbar__menu .navbar__menu__group--logo {
+    width: 33.333%;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
+    .navbar__menu .navbar__menu__group--logo a {
+      height: 66.666%;
+      text-align: center; }
+      .navbar__menu .navbar__menu__group--logo a img {
+        height: 100%; }
+  .navbar__menu .navbar__menu__group--left {
+    width: 33.333%; }
+    @media screen and (max-width: 800px) {
+      .navbar__menu .navbar__menu__group--left {
+        display: none; } }
+  .navbar__menu .navbar__menu__group--center {
+    width: 16.6665%; }
+    @media screen and (max-width: 800px) {
+      .navbar__menu .navbar__menu__group--center {
+        display: none; } }
+  .navbar__menu .navbar__menu__group--right {
+    width: 16.6665%;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end; }
+    .navbar__menu .navbar__menu__group--right a {
+      text-decoration: none;
+      color: white; }
+  .navbar__menu .navbar__menu__item {
+    padding: 25px;
+    cursor: pointer;
+    text-align: center; }
+    .navbar__menu .navbar__menu__item:hover {
+      background-color: burlywood; }
+  .navbar__menu .navbar__menu__item--stroked {
+    padding: 20px;
+    border: 5px solid #ffed2c; }
+
+/*# sourceMappingURL=prices.style.css.map */
