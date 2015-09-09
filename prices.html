@@ -3,8 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Цены</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="style/prices.style.css"/>
     <script src="script/dev/jquery/jquery-2.1.4.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
     <script src="script/script.js"></script>
 </head>
 <body>
@@ -22,9 +24,61 @@
     </div>
     <div class="navbar__menu__group navbar__menu__group--right">
         <div class="navbar__menu__item">
-            <a href="tel:+74995555555">+7 499 555-55-55</a>
+            <nobr><a href="tel:+74995555555">+7 499 555-55-55</a></nobr>
         </div>
     </div>
 </nav>
+<section class="title">
+    <!--
+     <div class="title__picture"></div>
+    <div class="title__picture--darken"></div>
+     -->
+    <div class="title__content">
+        <h1>Услуги и цены</h1>
+        <h2>Мы предлагаем</h2>
+    </div>
+</section>
+<section class="services">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                    <li class="active"><a href="#red" data-toggle="tab">Физическим лицам</a></li>
+                    <li><a href="#orange" data-toggle="tab">Юридическим лицам</a></li>
+                </ul>
+                <div id="my-tab-content" class="tab-content">
+                    <div class="tab-pane active" id="red">
+                        <ol>
+                            <li>Аэрография авто/мототехники (от 18 000 руб./деталь)</li>
+                            <li>Аэрография шлемов (от 25 000 руб.)</li>
+                            <li>Винилография (Оклейка плёнкой) (от 7 000 руб./деталь)</li>
+                            <li>Разработка эксклюзивного дизайна (от 5 000 руб.)</li>
+                            <li>Окраска авто/мототехники (от 7 000 руб./деталь)</li>
+                            <li>Пинстрайпинг (от 9 000 руб.)</li>
+                        </ol>
+                    </div>
+                    <div class="tab-pane" id="orange">
+                        1.​ Брендирование транспорта*
+
+                        2.​ Окраска транспорта*
+
+                        3.​ Аэрография и оклейка плёнкой*
+
+                        4.​ Реклама на транспорте*
+
+                        5.​ Разработка дизайн-макетов (от 5 000 руб.)
+
+                        *Минимальная сумма договора – 30 000 рублей.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</section>
+<section class="payment">
+
+</section>
 </body>
 </html>

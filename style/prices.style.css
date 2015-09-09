@@ -31,7 +31,7 @@ h1 {
   h1:after {
     content: "\a—";
     white-space: pre;
-    font-weight: 100; }
+    font-weight: 300; }
 
 h2 {
   width: 100%;
@@ -45,7 +45,6 @@ p {
   padding-right: 200px; }
 
 .navbar__menu {
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
@@ -168,5 +167,45 @@ p {
   .navbar__menu .navbar__menu__item--stroked {
     padding: 20px;
     border: 5px solid #ffed2c; }
+
+.title {
+  position: relative;
+  width: 100vw;
+  height: 33.33333vh; }
+  .title .title__picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url(../img/auto.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .title .title__picture--darken {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .title .title__content {
+    position: absolute;
+    z-index: 3;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .title .title__content h1 {
+      font-size: 3rem;
+      font-weight: 700; }
+
+.services #my-tab-content {
+  border-bottom: 1px solid #DDD;
+  padding: 30px;
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD; }
 
 /*# sourceMappingURL=prices.style.css.map */
