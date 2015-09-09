@@ -99,6 +99,7 @@ h2
         height: 100%
   .navbar__menu__group--left
     width: 33.333%
+    @include flex-wrap(no-wrap)
     @media screen and (max-width: 800px)
       display: none
   .navbar__menu__group--center
@@ -138,6 +139,7 @@ h2
       padding-top: 35px
       padding-left: 55px
       padding-right: 75px
+      overflow: hidden
       h1
         text-align: left
       p
@@ -145,6 +147,7 @@ h2
         line-height: 150%
     .work__description__navigation
       color: #000
+      background-color: #fff
       position: absolute
       bottom: 0
       width: 100%

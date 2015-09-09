@@ -123,7 +123,14 @@ h2 {
       .navbar__menu .navbar__menu__group--logo a img {
         height: 100%; }
   .navbar__menu .navbar__menu__group--left {
-    width: 33.333%; }
+    width: 33.333%;
+    -webkit-box-lines: no-wrap;
+    -moz-box-lines: no-wrap;
+    box-lines: no-wrap;
+    -webkit-flex-wrap: no-wrap;
+    -moz-flex-wrap: no-wrap;
+    -ms-flex-wrap: no-wrap;
+    flex-wrap: no-wrap; }
     @media screen and (max-width: 800px) {
       .navbar__menu .navbar__menu__group--left {
         display: none; } }
@@ -177,7 +184,8 @@ h2 {
     .work .work__description .work__description__text {
       padding-top: 35px;
       padding-left: 55px;
-      padding-right: 75px; }
+      padding-right: 75px;
+      overflow: hidden; }
       .work .work__description .work__description__text h1 {
         text-align: left; }
       .work .work__description .work__description__text p {
@@ -185,6 +193,7 @@ h2 {
         line-height: 150%; }
     .work .work__description .work__description__navigation {
       color: #000;
+      background-color: #fff;
       position: absolute;
       bottom: 0;
       width: 100%;
