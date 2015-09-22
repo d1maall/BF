@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
 @import url(http://webfonts.ru/import/intro.css)
 
-$font-stack: Helvetica Neue, sans-serif
+$font-stack: 'Lato' Helvetica Neue, sans-serif
 $border-width: 5px
 $border-color-social: white
 $border-color-cta: #ffed2c
@@ -29,7 +29,7 @@ $text-color: white
   font-size: 6rem
 
 html, body
-  background-color: white
+  background-color: #FCFCFC
   color: black
   height: 100%
   width: 100%
@@ -129,6 +129,47 @@ section
     border: $border-width solid $border-color-cta
 
 
+.ad
+  //height: 20vh
+  width: 100vw
+  @include display(flex)
+  @include justify-content(center)
+  border-bottom: 1px solid #dddddd
+  background-color: #fff
+  .ad__content
+    font-family: 'Lato', Helvetica Neue, sans-serif
+    font-weight: 300
+    letter-spacing: 1px
+    text-transform: uppercase
+    padding: 30px 10px
+    @include display(flex)
+    @include justify-content(center)
+    @include align-items(flex-end)
+    //width: 100%
+
+.ad--t
+  //height: 20vh
+  width: 100vw
+  @include display(flex)
+  @include justify-content(center)
+  //border-bottom: 1px solid #dddddd
+  background-color: #F8EB5B
+  .ad__content
+    font-family: 'Lato', Helvetica Neue, sans-serif
+    font-weight: 300
+    letter-spacing: 1px
+    text-transform: uppercase
+    padding: 30px 10px
+    @include display(flex)
+    @include justify-content(center)
+    @include align-items(flex-end)
+    .ad__content__text
+      b
+        font-weight: 700
+        border-bottom: 1px dashed black
+//width: 100%
+
+
 .title
   position: relative
   //background-color: #ffcaca
@@ -160,9 +201,23 @@ section
       font-size: 3rem
       font-weight: 700
 
-.services
+//.services
   #my-tab-content
     border-bottom: 1px solid #DDD
     padding: 30px
     border-left: 1px solid #DDD
     border-right: 1px solid #DDD
+
+.services
+  //width: 100vw
+  //max-width: 800px
+  @include display(flex)
+  @include flex-wrap(wrap)
+  @include justify-content(center)
+  .services__block
+    width: 20vw
+    margin: 40px 40px
+    height: 20vw
+    border: 1px solid #dddddd
+    box-shadow: 2px
+    border-radius: 3px
