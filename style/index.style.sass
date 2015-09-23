@@ -28,6 +28,10 @@ $text-color: white
   text-transform: uppercase
   font-size: 6rem
 
+=border-gallery()
+  outline: solid #000000 2px
+  outline-offset: -2px
+
 html, body
   background-color: black
   color: white
@@ -218,13 +222,14 @@ section
       text-transform: uppercase
 
 .gallery
-  background-color: darksalmon
+  background-color: black
   .gallery__item
     width: 100%
     height: 100%
     background-position: center center
     background-repeat: no-repeat
     background-size: cover
+    position: relative
   .gallery__content__first-row
     width: 100vw
     //height: 60vh
@@ -234,10 +239,32 @@ section
       width: 100vw*3/5
       height: 100vw*1/5
       .gallery__content__first-row__left__item
+        +border-gallery
         float: left
         width: 100%*2/3
         height: 100%
+        .gallery-overlay
+          position: absolute
+          width: 100%
+          height: 100%
+          background-color: #000000
+          opacity: 0.6
+          //z-index: -1
+        .gallery-item-title
+          position: absolute
+          left: 50%
+          top: 50%
+          color: #ffffff
+          display: none
+        &:hover
+          .gallery-overlay
+            opacity: 0.3
+          .gallery-item-title
+            display: block
+
       .gallery__content__first-row__center__item
+        +border-gallery
+        opacity: 0.3
         float: right
         width: 100%*1/3
         height: 100%
@@ -247,6 +274,10 @@ section
       width: 100vw*2/5
       height: 100vw*1/5
       .gallery__content__first-row__right__item
+        +border-gallery
+        opacity: 0.3
+        width: 100%
+        height: 100%
   .gallery__content__second-row
     width: 100vw
     //height: 30vh
@@ -256,10 +287,14 @@ section
       width: 100vw*3/5
       height: 100vw*1/5
       .gallery__content__second-row__left__item
+        +border-gallery
+        opacity: 0.3
         float: left
         width: 100%*1/3
         height: 100%
       .gallery__content__second-row__left-center__item
+        +border-gallery
+        opacity: 0.3
         float: right
         width: 100%*2/3
         height: 100%
@@ -269,10 +304,14 @@ section
       width: 100vw*2/5
       height: 100vw*1/5
       .gallery__content__second-row__right-center__item
+        +border-gallery
+        opacity: 0.3
         float: left
         width: 100%*1/2
         height: 100%
       .gallery__content__second-row__right__item
+        +border-gallery
+        opacity: 0.3
         float: right
         width: 100%*1/2
         height: 100%
