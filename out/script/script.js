@@ -1,7 +1,0 @@
-
-$(document).ready(function(){var myMap;ymaps.ready(init);function init(){myMap=new ymaps.Map('map',{center:[55.76,37.64],zoom:12,controls:[]});myMap.behaviors.disable('scrollZoom');var zoomControl=new ymaps.control.ZoomControl({options:{size:"small"}});myMap.controls.add(zoomControl);}
-$(window).scroll(function(event){if($(window).scrollTop()>0){$(".start-screen__bouncing-arrow").fadeOut();}
-if($(window).scrollTop()==0){$(".start-screen__bouncing-arrow").fadeIn();}
-if(($(window).scrollTop()>0)){console.log($(window).scrollTop()/$(window).height());var ratio=$(window).scrollTop()/$(window).height();if(ratio<1){$(".navbar__menu").css("background-color","rgba(0,0,0,"+ratio+")");}
-else{$(".navbar__menu").css("background-color","rgba(0,0,0,1)");}}
-if($(window).scrollTop()==0){$(".navbar__menu").css("background-color","rgba(0,0,0,0)");}});});
