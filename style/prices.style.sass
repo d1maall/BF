@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
 @import url(http://webfonts.ru/import/intro.css)
 
-$font-stack: 'Lato' Helvetica Neue, sans-serif
+$font-stack: 'Lato', Helvetica Neue, sans-serif
 $border-width: 5px
 $border-color-social: white
 $border-color-cta: #ffed2c
@@ -71,10 +71,9 @@ h2
   font-weight: 100
 
 p
-  //width: 100%
-  text-align: center
-  padding-left: 200px
-  padding-right: 200px
+  text-align: left
+  //padding-left: 200px
+  //padding-right: 200px
 
 section
 //some styles
@@ -145,14 +144,11 @@ section
     @include display(flex)
     @include justify-content(center)
     @include align-items(flex-end)
-    //width: 100%
 
 .ad--t
-  //height: 20vh
   width: 100vw
   @include display(flex)
   @include justify-content(center)
-  //border-bottom: 1px solid #dddddd
   background-color: #F8EB5B
   .ad__content
     font-family: 'Lato', Helvetica Neue, sans-serif
@@ -167,12 +163,12 @@ section
       b
         font-weight: 700
         border-bottom: 1px dashed black
-//width: 100%
+        &:hover
+          cursor: pointer
 
 
 .title
   position: relative
-  //background-color: #ffcaca
   width: 100vw
   height: 100vh*(1/3)
   .title__picture
@@ -201,23 +197,58 @@ section
       font-size: 3rem
       font-weight: 700
 
-//.services
-  #my-tab-content
-    border-bottom: 1px solid #DDD
-    padding: 30px
-    border-left: 1px solid #DDD
-    border-right: 1px solid #DDD
+.prices
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  ul>li
+    //text-transform: uppercase
+    //letter-spacing: 1px
+    font-size: 1.5em
+    font-weight: 300
+  .tab-content
+    padding: 20px
+    padding-bottom: 0
+    border-left: 1px solid #dddddd
+    border-right: 1px solid #dddddd
+    border-bottom: 1px solid #dddddd
+    border-bottom-right-radius: 4px
+    border-bottom-left-radius: 4px
+    background-color: white
+    font-weight: 300
+    font-size: 1.1em
+    .table
+      tr
+        td
+          &:last-child
+            text-align: right
+        &:first-of-type
+          td
+            border-top: none !important
+  p
+    padding-top: 0px
+    padding-bottom: 0px
+    margin-top: 20px
+    margin-bottom: 50px
+    padding-left: 21px
+    //padding-left: 28px
+    //padding-right: 28px
+    font-size: 1.1em
+    line-height: 1.5
+    border-left: 7px solid yellow
 
-.services
-  //width: 100vw
-  //max-width: 800px
-  @include display(flex)
-  @include flex-wrap(wrap)
-  @include justify-content(center)
-  .services__block
-    width: 20vw
-    margin: 40px 40px
-    height: 20vw
-    border: 1px solid #dddddd
-    box-shadow: 2px
-    border-radius: 3px
+.payment
+  padding-bottom: 100px
+  h2
+    padding-bottom: 25px
+  font-weight: 300
+  font-size: 1.1em
+  a
+    width: 100%
+    display: block
+    padding: 10px 28px
+    font-size: 1.3em
+    padding-left: 28px
+  .payment__method
+    border-bottom: 1px solid #dddddd
+  .collapse
+    padding-bottom: 10px
+    padding-left: 28px

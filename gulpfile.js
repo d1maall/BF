@@ -7,12 +7,12 @@ var gulp = require('gulp'),
     /*notify = require("gulp-notify");*/
 
 gulp.task('default', function() {
-    gulp.src('./style/*.css')
+    gulp.src(['./style/*.css', 'bootstrap/css/bootstrap.css'])
         .pipe(uncss({
             html: ['*.html']
         }))
         //.pipe(rename({suffix: '.min'}))
-        //.pipe(minifyCSS())
+        .pipe(minifyCSS())
         .pipe(gulp.dest('./out/style'));
 
     gulp.src('./script/*.js')
@@ -23,4 +23,10 @@ gulp.task('default', function() {
     gulp.src('*.html')
         .pipe(htmlmin())
         .pipe(gulp.dest('./out/'));
+
+    /*gulp.src('bootstrap/css/bootstrap.css')
+        .pipe(uncss({
+            html: ['prices.html']
+        }))
+        .pipe(gulp.dest('./out/bootstrap/css'));*/
 });

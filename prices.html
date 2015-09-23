@@ -3,15 +3,12 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Цены</title>
-    <!--
-     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-     -->
-
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/prices.style.css"/>
     <script src="script/dev/jquery/jquery-2.1.4.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="script/script.js"></script>
+    <script src="script/prices.script.js"></script>
 </head>
 <body>
 <section class="ad--t">
@@ -37,87 +34,166 @@
         </div>
     </div>
 </nav>
-<!--
-<section class="ad">
-    <div class="ad__content">
-        <div class="ad__content__icon">
-            <img src="img/ecommerce_bag.svg" alt="bag"/>
-        </div>
-        <div class="ad__content__text">Работаем<br>в кредит</div>
-    </div>
-    <div class="ad__content">
-        <div class="ad__content__icon">
-            <img src="img/ecommerce_creditcard.svg" alt="bag"/>
-        </div>
-        <div class="ad__content__text">Принимаем к оплате<br>карты</div>
-    </div>
-</section>
- -->
-
 <section class="title">
     <div class="title__content">
-        <h1>Услуги и цены</h1>
+        <h1>Услуги
+            <nobr>и цены</nobr>
+        </h1>
         <h2>Мы предлагаем</h2>
     </div>
 </section>
 
-<!--
-<section class="services">
-    <div class="services__block"></div>
-    <div class="services__block"></div>
-    <div class="services__block"></div>
-    <div class="services__block"></div>
-    <div class="services__block"></div>
-    <div class="services__block"></div>
-</section>
- -->
+<section class="prices">
+    <div class="container">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <ul id="tabs" class="nav nav-tabs nav-justified" data-tabs="tabs">
+                <li class="active"><a href="#red" data-toggle="tab">Физическим лицам</a></li>
+                <li><a href="#orange" data-toggle="tab">Юридическим лицам</a></li>
+                <!--
+                <li><a href="#yellow" data-toggle="tab">Yellow</a></li>
+                <li><a href="#green" data-toggle="tab">Green</a></li>
+                <li><a href="#blue" data-toggle="tab">Blue</a></li>
+                -->
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="red">
+                    <table class="table table-hover">
+                        <tr>
+                            <td>Аэрография автомобилей и мотоциклов</td>
+                            <td>от 18 000&thinsp;₽</td>
+                        </tr>
+                        <tr>
+                            <td>Аэрография шлемов</td>
+                            <td>от 25 000&thinsp;₽</td>
+                        </tr>
+                        <tr>
+                            <td>Винилография</td>
+                            <td>от 7 000&thinsp;₽</td>
+                        </tr>
+                        <tr>
+                            <td>Разработка эксклюзивного дизайна</td>
+                            <td>от 5 000&thinsp;₽</td>
+                        </tr>
+                        <tr>
+                            <td>Окраска автомобилей и мотоциклов</td>
+                            <td>от 7 000&thinsp;₽</td>
+                        </tr>
+                        <tr>
+                            <td>Пинстрайпинг</td>
+                            <td>от 9 000&thinsp;₽</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-pane" id="orange">
+                    <table class="table table-hover">
+                        <tr>
+                            <td>Брендирование транспорта</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Окраска транпорта</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Аэрография и оклейка пленкой</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Реклама на транспорте</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Разработка дизайн макетов</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-pane" id="yellow">
+                    <h1>Yellow</h1>
 
+                    <p>yellow yellow yellow yellow yellow</p>
+                </div>
+                <div class="tab-pane" id="green">
+                    <h1>Green</h1>
 
+                    <p>green green green green green</p>
+                </div>
+                <div class="tab-pane" id="blue">
+                    <h1>Blue</h1>
 
-<!--
-<section class="services">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                    <li class="active"><a href="#red" data-toggle="tab">Физическим лицам</a></li>
-                    <li><a href="#orange" data-toggle="tab">Юридическим лицам</a></li>
-                </ul>
-                <div id="my-tab-content" class="tab-content">
-                    <div class="tab-pane active" id="red">
-                        <ol>
-                            <li>Аэрография авто/мототехники (от 18 000 руб./деталь)</li>
-                            <li>Аэрография шлемов (от 25 000 руб.)</li>
-                            <li>Винилография (Оклейка плёнкой) (от 7 000 руб./деталь)</li>
-                            <li>Разработка эксклюзивного дизайна (от 5 000 руб.)</li>
-                            <li>Окраска авто/мототехники (от 7 000 руб./деталь)</li>
-                            <li>Пинстрайпинг (от 9 000 руб.)</li>
-                        </ol>
-                    </div>
-                    <div class="tab-pane" id="orange">
-                        1.​ Брендирование транспорта*
-
-                        2.​ Окраска транспорта*
-
-                        3.​ Аэрография и оклейка плёнкой*
-
-                        4.​ Реклама на транспорте*
-
-                        5.​ Разработка дизайн-макетов (от 5 000 руб.)
-
-                        *Минимальная сумма договора – 30 000 рублей.
-                    </div>
+                    <p>blue blue blue blue blue</p>
                 </div>
             </div>
-            <div class="col-md-3"></div>
+            <p>Стоимость нанесения рисунка рассчитывается индивидуально. Цена складывается исходя из стоимости отдельных
+                видов работ: сборка-разборка автомобиля, подготовка поверхностей и лакировка отдельных деталей, техника
+                и сложность выполнения рисунка. </p>
         </div>
+        <div class="col-md-2"></div>
     </div>
 </section>
- -->
 
-<section class="payment">
+<section class="payment" id="scroll-anchor">
+    <div class="container">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2>Способы оплаты</h2>
 
+            <div class="payment__method">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                   aria-controls="collapseOne">
+                    Оплата наличными
+                </a>
+                <div id="collapseOne" class="collapse">123</div>
+            </div>
+
+            <div class="payment__method">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                   aria-controls="collapseOne">
+                    Оплата картой в нашем офисе
+                </a>
+                <div id="collapseTwo" class="collapse">123</div>
+            </div>
+
+            <div class="payment__method">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                   aria-controls="collapseOne">
+                    Банковский перевод
+                </a>
+                <div id="collapseThree" class="collapse">123</div>
+            </div>
+
+            <div class="payment__method">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                   aria-controls="collapseOne">
+                    Покупка в кредит
+                </a>
+                <div id="collapseFour" class="collapse">
+                    Кредит от 0% до 24 месяцев. Подробности спрашивайте у менеджеров по телефону.
+                </div>
+            </div>
+
+            <div class="payment__method">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                   aria-controls="collapseOne">
+                    Подарочная карта
+                </a>
+                <div id="collapseFive" class="collapse">
+                    Подарочные карты "открытого" номинала: каждый вправе сам решать сколько он хочет подарить денег на подарок друзьям, коллегам, родным и близким. Подарочная карта действительна 1 год с момента её оформления. Так же, подарочная карта даёт скидку 10% на все услуги в течение всего срока своего действия. Выезд нашего курьера в пределах МКАД - бесплатный.
+                </div>
+            </div>
+            <!--
+            <ol>
+                <li>Оплата наличными</li>
+                <li>Оплата картой в нашем офисе</li>
+                <li>Банковский перевод</li>
+                <li>Покупка в кредит*</li>
+                <li>Подарочная карта**</li>
+            </ol>
+             -->
+        </div>
+        <div class="col-md-2"></div>
+    </div>
 </section>
 </body>
 </html>
