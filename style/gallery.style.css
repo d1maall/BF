@@ -39,6 +39,12 @@ h2 {
   font-size: 1.5rem;
   letter-spacing: 4px; }
 
+a {
+  text-decoration: none;
+  color: #ffffff; }
+  a:visited {
+    color: #ffffff; }
+
 .content {
   height: 100vh;
   position: relative; }

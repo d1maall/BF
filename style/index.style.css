@@ -44,6 +44,12 @@ p {
   padding-left: 200px;
   padding-right: 200px; }
 
+a {
+  text-decoration: none;
+  color: #ffffff; }
+  a:visited {
+    color: #ffffff; }
+
 .navbar__menu {
   position: fixed;
   top: 0;
@@ -299,6 +305,7 @@ p {
 
 .quality {
   background-color: #000000;
+  padding-top: 40px;
   padding-bottom: 40px;
   display: -webkit-box;
   display: -moz-box;
