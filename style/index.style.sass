@@ -33,8 +33,9 @@ $text-color: white
   outline-offset: -2px
 
 =gallery-hover-effect()
+  cursor: pointer
   .gallery-overlay
-    opacity: 0.4
+    opacity: 0.2
     transition: 0.4s
   .gallery-item-title
     display: block
@@ -46,7 +47,7 @@ $text-color: white
     width: 100%
     height: 100%
     background-color: #000000
-    opacity: 0.7
+    opacity: 0.5
   .gallery-item-title
     font-family: 'Lato', Helvetica Neue, sans-serif
     font-weight: 300
@@ -147,6 +148,8 @@ p
     &:hover
       background-color: #ffed2c
       color: black
+      a
+        color: black
   .navbar__menu__item--stroked
     padding: 25px - $border-width
     border: $border-width solid $border-color-cta
@@ -185,7 +188,7 @@ p
       border-bottom: $border-width solid $border-color-social
       text-align: center
       &:hover
-        background-color: burlywood
+        background-color: rgba(0,0,0,0.3)
       &:first-child
         border: $border-width solid $border-color-social
   .start-screen__title
@@ -224,9 +227,9 @@ p
       display: none
 
 .quality
-  background-color: #ffcaca
+  background-color: #000000
   //padding-top: 80px
-  //padding-bottom: 40px
+  padding-bottom: 40px
   @include display(flex)
   @include justify-content(center)
   .quality__text
@@ -244,6 +247,7 @@ p
 
 .gallery
   background-color: black
+  padding-bottom: 40px
   .gallery__item
     width: 100%
     height: 100%
@@ -339,7 +343,7 @@ p
 
 
 .contact-us
-  background-color: #8A6343
+  background-color: black
   @include display(flex)
   @include justify-content(center)
   @include flex-wrap(wrap)
