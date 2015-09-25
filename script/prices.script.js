@@ -8,4 +8,13 @@ $(document).ready(function(){
             scrollTop: $("#scroll-anchor").offset().top
         }, 1000);
     });
+    $(".payment__method > a").click(function() {
+        if ( !($(this).find('img').hasClass('rotate'))) {
+            $(this).find("img").addClass("rotate");
+            //console.log('rotating');
+        }
+        else {
+            $(this).find('img').removeClass('rotate');
+        }
+    })
 });

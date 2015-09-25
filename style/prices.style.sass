@@ -1,8 +1,8 @@
 @import "bourbon/bourbon"
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
-@import url(http://webfonts.ru/import/intro.css)
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900)
+//@import url(http://webfonts.ru/import/intro.css)
 
-$font-stack: 'Lato', Helvetica Neue, sans-serif
+$font-stack: Lato, Helvetica Neue, sans-serif
 $border-width: 5px
 $border-color-social: white
 $border-color-cta: #ffed2c
@@ -10,14 +10,14 @@ $social-cell-size: 66px
 $text-color: white
 
 =menu-lettering($spacing: 2px)
-  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-family: Lato, Helvetica Neue, sans-serif
   font-weight: 300
   font-size: 0.8rem
   text-transform: uppercase
   letter-spacing: $spacing
 
 =lettering($spacing: 2px, $font-size: 1rem, $font-weight: 100)
-  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-family: Lato, Helvetica Neue, sans-serif
   font-weight: $font-weight
   font-size: $font-size
   text-transform: uppercase
@@ -40,13 +40,13 @@ html, body
 p
   margin: 0
   padding: 0
-  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-family: Lato, Helvetica Neue, sans-serif
   font-weight: 300
 
 h1, h2, h3, h4, h5, h6
   margin: 0
   padding: 0 0 7px 0
-  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-family: Lato, Helvetica Neue, sans-serif
   font-weight: 500
   text-transform: uppercase
 
@@ -63,7 +63,7 @@ h1
 h2
   width: 100%
   text-align: center
-  font-size: 1.5rem
+  font-size: 1.5em
   letter-spacing: 4px
 //&:after
   content: "\a —"
@@ -75,7 +75,11 @@ p
   //padding-left: 200px
   //padding-right: 200px
 
-section
+.rotate
+  transition: 0.5s ease-in-out
+  @include transform(rotate(-180deg))
+
+  section
 //some styles
 
 .navbar__menu
@@ -136,7 +140,7 @@ section
   border-bottom: 1px solid #dddddd
   background-color: #fff
   .ad__content
-    font-family: 'Lato', Helvetica Neue, sans-serif
+    font-family: Lato, Helvetica Neue, sans-serif
     font-weight: 300
     letter-spacing: 1px
     text-transform: uppercase
@@ -151,7 +155,7 @@ section
   @include justify-content(center)
   background-color: #F8EB5B
   .ad__content
-    font-family: 'Lato', Helvetica Neue, sans-serif
+    font-family: Lato, Helvetica Neue, sans-serif
     font-weight: 300
     letter-spacing: 1px
     text-transform: uppercase
@@ -198,7 +202,7 @@ section
       font-weight: 700
 
 .prices
-  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-family: Lato, Helvetica Neue, sans-serif
   ul>li
     //text-transform: uppercase
     //letter-spacing: 1px
@@ -240,15 +244,31 @@ section
   h2
     padding-bottom: 25px
   font-weight: 300
-  font-size: 1.1em
   a
     width: 100%
     display: block
     padding: 10px 28px
     font-size: 1.3em
     padding-left: 28px
+    img
+      height: 1em
+      transition: 0.5s ease-in-out
+      //@include transform(rotate(-90deg))
   .payment__method
     border-bottom: 1px solid #dddddd
   .collapse
     padding-bottom: 10px
     padding-left: 28px
+    //margin-left: 28px
+    font-size: 1.1em
+  p
+    padding-top: 0px
+    padding-bottom: 0px
+    margin-top: 20px
+    margin-bottom: 50px
+    padding-left: 21px
+    //padding-left: 28px
+    //padding-right: 28px
+    font-size: 1.1em
+    line-height: 1.5
+    border-left: 7px solid yellow
