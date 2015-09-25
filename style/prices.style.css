@@ -135,7 +135,8 @@ p {
     -ms-flex-align: center; }
     .navbar__menu .navbar__menu__group--logo a {
       height: 66.666%;
-      text-align: center; }
+      text-align: center;
+      padding-left: 10px; }
       .navbar__menu .navbar__menu__group--logo a img {
         height: 100%; }
   .navbar__menu .navbar__menu__group--left {
@@ -159,15 +160,17 @@ p {
     -o-justify-content: flex-end;
     justify-content: flex-end;
     -ms-flex-pack: end; }
-    .navbar__menu .navbar__menu__group--right a {
-      text-decoration: none;
+  .navbar__menu a {
+    text-decoration: none;
+    color: white; }
+    .navbar__menu a:visited {
       color: white; }
   .navbar__menu .navbar__menu__item {
     padding: 25px;
     cursor: pointer;
     text-align: center; }
     .navbar__menu .navbar__menu__item:hover {
-      background-color: burlywood; }
+      background-color: #ffed2c; }
   .navbar__menu .navbar__menu__item--stroked {
     padding: 20px;
     border: 5px solid #ffed2c; }

@@ -111,6 +111,7 @@ p
     a
       height: 66.666%
       text-align: center
+      padding-left: 10px
       img
         height: 100%
   .navbar__menu__group--left
@@ -124,15 +125,18 @@ p
   .navbar__menu__group--right
     width: 16.6665%
     @include justify-content(flex-end)
-    a
-      text-decoration: none
+  a
+    text-decoration: none
+    color: $text-color
+    &:visited
       color: $text-color
   .navbar__menu__item
     padding: 25px
     cursor: pointer
     text-align: center
     &:hover
-      background-color: burlywood
+      background-color: $border-color-cta
+      //font-weight: 500
   .navbar__menu__item--stroked
     padding: 25px - $border-width
     border: $border-width solid $border-color-cta
