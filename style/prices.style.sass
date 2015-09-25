@@ -1,5 +1,5 @@
 @import "bourbon/bourbon"
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900)
+//@import url(//fonts.googleapis.com/css?family=Lato:100,300,400,700,900)
 //@import url(http://webfonts.ru/import/intro.css)
 
 $font-stack: Lato, Helvetica Neue, sans-serif
@@ -76,14 +76,14 @@ p
   //padding-right: 200px
 
 .rotate
-  transition: 0.5s ease-in-out
+  transition: 0.5s //ease-in-out
   //@include transform(rotate(-180deg))
   @include transform(scaleY(-1))
 
   section
 //some styles
 
-a
+//a
   text-decoration: none
   color: #ffffff
   &:visited
@@ -260,6 +260,10 @@ a
       height: 1em
       transition: 0.5s ease-in-out
       //@include transform(rotate(-90deg))
+    &:hover
+      text-decoration: none
+      span
+        border-bottom: 1px solid #337ab7
   .payment__method
     border-bottom: 1px solid #dddddd
   .collapse

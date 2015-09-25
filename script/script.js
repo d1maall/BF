@@ -33,7 +33,7 @@ $(document).ready(function () {
 
         if (($(window).scrollTop() > 0)) {
             //console.log($(window).scrollTop()/$(window).height());
-            var ratio = $(window).scrollTop()/$(window).height();
+            var ratio = $(window).scrollTop()/2 * $(window).height();
             if (ratio < 1) {
                 $(".navbar__menu").css("background-color", "rgba(0,0,0," + ratio + ")");
             }
