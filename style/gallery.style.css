@@ -158,7 +158,10 @@ h2 {
     cursor: pointer;
     text-align: center; }
     .navbar__menu .navbar__menu__item:hover {
-      background-color: burlywood; }
+      background-color: #ffed2c;
+      color: #000000; }
+      .navbar__menu .navbar__menu__item:hover a {
+        color: #000000; }
   .navbar__menu .navbar__menu__item--stroked {
     padding: 20px;
     border: 5px solid #ffed2c; }
