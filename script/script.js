@@ -32,7 +32,7 @@ $(document).ready(function () {
         }
 
         if (($(window).scrollTop() > 0)) {
-            console.log($(window).scrollTop()/$(window).height());
+            //console.log($(window).scrollTop()/$(window).height());
             var ratio = $(window).scrollTop()/$(window).height();
             if (ratio < 1) {
                 $(".navbar__menu").css("background-color", "rgba(0,0,0," + ratio + ")");
@@ -45,5 +45,15 @@ $(document).ready(function () {
         if ($(window).scrollTop() == 0) {
             $(".navbar__menu").css("background-color", "rgba(0,0,0,0)");
         }
+    });
+    $("#gallery-scroll-activator").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#gallery-scroll-anchor").offset().top - 100
+        }, 1000);
+    });
+    $("#contact-scroll-activator").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#contact-scroll-anchor").offset().top - 100
+        }, 1000);
     });
 });
