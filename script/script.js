@@ -32,18 +32,31 @@ $(document).ready(function () {
         }
 
         if (($(window).scrollTop() > 0)) {
-            //console.log($(window).scrollTop()/$(window).height());
-            var ratio = $(window).scrollTop()/2 * $(window).height();
-            if (ratio < 1) {
-                $(".navbar__menu").css("background-color", "rgba(0,0,0," + ratio + ")");
+            var ratioForBackground = 0.7 + 0.3 * ($(window).scrollTop()/(($(".start-screen")).height() + $(".quality").height()));
+            //console.log(0.7 + 0.3 * ratioForBackground);
+            if (ratioForBackground < 1) {
+                $(".background__overlay").css("background-color", "rgba(0,0,0," + ratioForBackground + ")");
+            }
+            else {
+                $(".background__overlay").css("background-color", "rgba(0,0,0,1)");
+            }
+
+        }
+
+        if (($(window).scrollTop() > 0)) {
+            //console.log($(window).scrollTop()/(($(".start-screen")).height() + $(".quality").height()));
+            var ratioForNavbar = 4 * $(window).scrollTop()/($(window).height());
+            if (ratioForNavbar < 1) {
+                $(".navbar__menu").css("background-color", "rgba(0,0,0," + ratioForNavbar + ")");
             }
             else {
                 $(".navbar__menu").css("background-color", "rgba(0,0,0,1)");
             }
-
         }
+
         if ($(window).scrollTop() == 0) {
             $(".navbar__menu").css("background-color", "rgba(0,0,0,0)");
+            $(".background__overlay").css("background-color", "rgba(0,0,0,0.7)");
         }
     });
     $("#gallery-scroll-activator").click(function() {
