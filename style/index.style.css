@@ -698,4 +698,12 @@ a {
   justify-content: center;
   -ms-flex-pack: center; }
 
+.white-popup-block {
+  background-color: #fff;
+  color: #000; }
+
+.mfp-content {
+  max-width: 500px;
+  width: 50%; }
+
 /*# sourceMappingURL=index.style.css.map */

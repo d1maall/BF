@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,500,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/dev/animate.css-master/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="magnific-popup-master/dist/magnific-popup.css"/>
@@ -28,12 +28,14 @@
         </a>
     </div>
     <div class="navbar__menu__group navbar__menu__group--center">
-        <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+        <a class="popup-with-form" href="#form">
+            <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+        </a>
     </div>
     <div class="navbar__menu__group navbar__menu__group--right">
-        <div class="navbar__menu__item">
-            <a href="tel:+74995555555">+7 499 555-55-55</a>
-        </div>
+        <a href="tel:+74995555555">
+            <div class="navbar__menu__item">+7 499 555-55-55</div>
+        </a>
     </div>
 </nav>
 <section class="background">
@@ -125,5 +127,19 @@
     <div class="footer__all-rights-reserved">Все права защищены |</div>
     <div class="footer_offer"> Оферта</div>
 </section>
+<form id="form" class="white-popup-block mfp-hide">
+    <h1>Form</h1>
+    <ul>
+        <li>
+            <input class="name" name="name" type="text" placeholder="Имя"><div class="dialogue dialogue-name">text goes here</div>
+        </li>
+        <li>
+            <input class="email" name="email" type="email" placeholder="E-mail"><div class="dialogue dialogue-email">text goes here</div>
+        </li>
+        <li>
+            <input class="phone" name="phone" type="tel" placeholder="Телефон"><div class="dialogue dialogue-phone">text goes here</div>
+        </li>
+    </ul>
+</form>
 </body>
 </html>
