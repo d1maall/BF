@@ -1,6 +1,8 @@
 @import "bourbon/bourbon"
 //@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
 @import url(http://webfonts.ru/import/intro.css)
+@import url(http://webfonts.ru/import/lato.css)
+
 
 $font-stack: Helvetica Neue, sans-serif
 $border-width: 5px
@@ -12,7 +14,7 @@ $text-color: white
 =menu-lettering($spacing: 2px)
   font-family: 'Lato', Helvetica Neue, sans-serif
   font-weight: 300
-  font-size: 0.8rem
+  font-size: 0.7rem
   text-transform: uppercase
   letter-spacing: $spacing
 
@@ -56,6 +58,7 @@ $text-color: white
     position: absolute
     left: 50%
     top: 50%
+    text-align: center
     @include transform(translateX(-50%) translateY(-25%))
     color: $text-color
     display: none
@@ -296,8 +299,6 @@ a
         +gallery-layers
         &:hover
           +gallery-hover-effect
-
-
     .gallery__content__first-row__right
       width: 100vw*2/5
       height: 100vw*1/5*1.2
@@ -358,7 +359,10 @@ a
           +gallery-hover-effect
   h1
     padding-bottom: 12px
-
+  .gallery__footer-text
+    +lettering()
+    text-align: center
+    padding-top: 30px
 
 .contact-us
   background-color: black
