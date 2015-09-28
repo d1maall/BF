@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    var initialOpacity = parseFloat(
+        $('.background > .background__overlay').css('background-color').split(',')[3], 10
+    );
 
     var myMap;
     ymaps.ready(init);
@@ -32,8 +35,9 @@ $(document).ready(function () {
         }
 
         if (($(window).scrollTop() > 0)) {
-            var ratioForBackground = 0.7 + 0.3 * ($(window).scrollTop()/(($(".start-screen")).height() + $(".quality").height()));
+            var ratioForBackground = initialOpacity + ((1 - initialOpacity) * ($(window).scrollTop()/(($(".start-screen")).height() + $(".quality").height())));
             //console.log(0.7 + 0.3 * ratioForBackground);
+            //var ratioForBackground = 0.7 + ( 0.3 * ($(window).scrollTop()/(($(".start-screen")).height() + $(".quality").height())));
             if (ratioForBackground < 1) {
                 $(".background__overlay").css("background-color", "rgba(0,0,0," + ratioForBackground + ")");
             }
@@ -56,7 +60,7 @@ $(document).ready(function () {
 
         if ($(window).scrollTop() == 0) {
             $(".navbar__menu").css("background-color", "rgba(0,0,0,0)");
-            $(".background__overlay").css("background-color", "rgba(0,0,0,0.7)");
+            $(".background__overlay").css("background-color", "rgba(0,0,0," + initialOpacity + ")");
         }
     });
     $("#gallery-scroll-activator").click(function() {
