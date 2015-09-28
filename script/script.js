@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $('.popup-with-form').magnificPopup({
+        type: 'inline',
+        preloader: false
+    });
+
     var initialOpacity = parseFloat(
         $('.background > .background__overlay').css('background-color').split(',')[3], 10
     );
