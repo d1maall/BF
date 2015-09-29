@@ -200,6 +200,8 @@ a {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex; }
+      .work .work__description .work__description__arrows a {
+        color: #000; }
       .work .work__description .work__description__arrows .work__description__arrows__item {
         cursor: pointer;
         width: 50%;
@@ -317,5 +319,13 @@ a {
 
 .fotorama__thumb-border {
   border-color: #ffed2c; }
+
+.white-popup-block {
+  background-color: #fff;
+  color: #000; }
+
+.mfp-content {
+  max-width: 500px;
+  width: 50%; }
 
 /*# sourceMappingURL=gallery.style.css.map */

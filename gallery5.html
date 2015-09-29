@@ -11,8 +11,10 @@
     <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
 
+    <link rel="stylesheet" href="magnific-popup-master/dist/magnific-popup.css"/>
     <link rel="stylesheet" href="style/gallery.style.css"/>
 
+    <script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
     <script src="script/gallery.script.js"></script>
 </head>
 <body>
@@ -33,7 +35,9 @@
             </a>
         </div>
         <div class="navbar__menu__group navbar__menu__group--center">
-            <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+            <a class="popup-with-form" href="#form">
+                <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+            </a>
         </div>
         <div class="navbar__menu__group navbar__menu__group--right">
             <div class="navbar__menu__item">
@@ -54,14 +58,14 @@
         </div>
         <div class="work__description">
             <div class="work__description__arrows">
-                <div class="work__description__arrows__item work__description__arrows__previous">
+                <a class="work__description__arrows__item work__description__arrows__previous" href="gallery4.html">
                     <img class="previous-gallery" src="img/arrow.svg" alt="logo"/>
                     <p>Предыдущая<br>работа</p>
-                </div>
-                <div class="work__description__arrows__item work__description__arrows__next">
+                </a>
+                <a class="work__description__arrows__item work__description__arrows__next" href="gallery6.html">
                     <p>Следующая<br>работа</p>
                     <img class="next-gallery" src="img/arrow.svg" alt="logo"/>
-                </div>
+                </a>
             </div>
             <div class="work__description__text">
                 <h1>Lamborghini<br/>Veneno</h1>
@@ -78,6 +82,19 @@
         </div>
     </div>
 </div>
-
+<form id="form" class="white-popup-block mfp-hide">
+    <h1>Form</h1>
+    <ul>
+        <li>
+            <input class="name" name="name" type="text" placeholder="Имя"><div class="dialogue dialogue-name">text goes here</div>
+        </li>
+        <li>
+            <input class="email" name="email" type="email" placeholder="E-mail"><div class="dialogue dialogue-email">text goes here</div>
+        </li>
+        <li>
+            <input class="phone" name="phone" type="tel" placeholder="Телефон"><div class="dialogue dialogue-phone">text goes here</div>
+        </li>
+    </ul>
+</form>
 </body>
 </html>

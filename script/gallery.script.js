@@ -4,6 +4,10 @@ function setGalleryHeight() {
 
 //ждем полной загрузки документа
 $(document).ready(function () {
+    $('.popup-with-form').magnificPopup({
+        type: 'inline',
+        preloader: false
+    });
     $(".work").css("height", $(".content").height() - $(".navbar__menu").height());
     $(function () {
         //console.log($(".content").height() - $(".navbar__menu").height())
