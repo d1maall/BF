@@ -668,6 +668,8 @@ a {
     letter-spacing: 2px;
     text-align: center;
     padding-top: 30px; }
+    .gallery .gallery__footer-text .gallery__footer-social {
+      border-bottom: dashed 1px; }
 
 .contact-us {
   background-color: black;
