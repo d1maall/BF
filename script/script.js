@@ -78,4 +78,21 @@ $(document).ready(function () {
             scrollTop: $("#contact-scroll-anchor").offset().top - 100
         }, 1000);
     });
+
+    $(".button").click(function send(){
+        $.post(
+            "./mail.php",
+            {
+                name: $('.name').val(),
+                phone: $('.phone').val(),
+                email: $('.email').val()
+            }
+        );
+        //alert('Имя: ' + name + '\n' + 'Почта: ' + email + '\n' + 'Телефон: ' + phone );
+        alert("Ваша заявка получена. Мы скоро свяжемся с вами.");
+        $('.name').val('');
+        $('.email').val('');
+        $('.phone').val('');
+        $.magnificPopup.close();
+    });
 });

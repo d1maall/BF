@@ -18,7 +18,8 @@ $(document).ready(function () {
                 loop: 'true',
                 height: ($(".content").height() - $(".navbar__menu").height() - 64 - 4),
                 thumbheight: '64',
-                resize: 'true'
+                resize: 'true',
+                keyboard: 'true'
             }
         );
     });
@@ -47,5 +48,22 @@ $(document).ready(function () {
         fotorama.resize({
             height: ($(".content").height() - $(".navbar__menu").height() - 64 - 4)
         });
+    });
+
+    $(".button").click(function send(){
+        $.post(
+            "./mail.php",
+            {
+                name: $('.name').val(),
+                phone: $('.phone').val(),
+                email: $('.email').val()
+            }
+        );
+        //alert('Имя: ' + name + '\n' + 'Почта: ' + email + '\n' + 'Телефон: ' + phone );
+        alert("Ваша заявка получена. Мы скоро свяжемся с вами.");
+        $('.name').val('');
+        $('.email').val('');
+        $('.phone').val('');
+        $.magnificPopup.close();
     });
 });
