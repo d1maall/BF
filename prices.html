@@ -5,8 +5,12 @@
     <title>Цены</title>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="magnific-popup-master/dist/magnific-popup.css"/>
     <link rel="stylesheet" href="style/prices.style.css"/>
     <script src="script/dev/jquery/jquery-2.1.4.js"></script>
+
+    <script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="script/prices.script.js"></script>
 </head>
@@ -30,7 +34,9 @@
         </a>
     </div>
     <div class="navbar__menu__group navbar__menu__group--center">
-        <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+        <a class="popup-with-form" href="#form">
+            <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+        </a>
     </div>
     <div class="navbar__menu__group navbar__menu__group--right">
         <div class="navbar__menu__item">
@@ -208,5 +214,20 @@
         <div class="col-md-2"></div>
     </div>
 </section>
+<form id="form" class="white-popup-block mfp-hide">
+    <h1>Оставьте заявку</h1>
+    <ul>
+        <li>
+            <input class="name" name="name" type="text" placeholder="Имя">
+        </li>
+        <li>
+            <input class="email" name="email" type="email" placeholder="E-mail">
+        </li>
+        <li>
+            <input class="phone" name="phone" type="tel" placeholder="Телефон">
+        </li>
+    </ul>
+    <div class="button">Отправить</div>
+</form>
 </body>
 </html>

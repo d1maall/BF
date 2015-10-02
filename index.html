@@ -28,7 +28,9 @@
         </a>
     </div>
     <div class="navbar__menu__group navbar__menu__group--center">
-        <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+        <a class="popup-with-form" href="#form">
+            <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+        </a>
     </div>
     <div class="navbar__menu__group navbar__menu__group--right">
         <div class="navbar__menu__item">
@@ -127,5 +129,20 @@
     <div class="footer__all-rights-reserved">Все права защищены |</div>
     <div class="footer_offer"> Оферта</div>
 </section>
+<form id="form" class="white-popup-block mfp-hide">
+    <h1>Оставьте заявку</h1>
+    <ul>
+        <li>
+            <input class="name" name="name" type="text" placeholder="Имя">
+        </li>
+        <li>
+            <input class="email" name="email" type="email" placeholder="E-mail">
+        </li>
+        <li>
+            <input class="phone" name="phone" type="tel" placeholder="Телефон">
+        </li>
+    </ul>
+    <div class="button">Отправить</div>
+</form>
 </body>
 </html>

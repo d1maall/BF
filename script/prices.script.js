@@ -2,6 +2,10 @@
  * Created by dmitry on 10.09.15.
  */
 $(document).ready(function(){
+    $('.popup-with-form').magnificPopup({
+        type: 'inline',
+        preloader: false
+    });
     //$('#tabs').tab();
     $(".ad--t > .ad__content > .ad__content__text > b").click(function() {
         $('html, body').animate({
